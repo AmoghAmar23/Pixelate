@@ -16,4 +16,17 @@ makeRow()
 makeRow()
 
 const button = document.getElementById('add-row')
-button.addEventListner('click', makeRow)
+button.addEventListener('click', makeRow)
+
+table.addEventListener('click', colorize)
+
+
+function colorize (event) {
+    const target = event.target
+    if (target.className.length){
+        target.className = ''
+    } else {
+        target.className = 'red'
+    }
+}
+
